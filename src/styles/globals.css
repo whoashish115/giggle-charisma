@@ -281,28 +281,47 @@
   font-weight: 900;
   font-style: normal;
 }
+@theme {
+  /* Light Theme */
+  --color-primary: rgb(255, 207, 64);
+  --color-secondary: rgb(255, 221, 102);
+  --color-tertiary: rgb(255, 182, 36);
 
-@theme  
-{
---color-primary: light-dark(rgb(255, 207, 64), rgb(255, 193, 45));
---color-secondary: light-dark(rgb(255, 221, 102), rgb(255, 204, 77));
---color-tertiary: light-dark(rgb(255, 182, 36), rgb(240, 170, 30));
+  --color-default: rgba(255, 255, 255, 1);
+  --color-paper: rgba(250, 250, 250, 1);
+  --color-box: rgba(245, 240, 235, 1);
+  --color-highlight: rgb(255, 248, 230);
 
---color-default: light-dark(rgba(255, 255, 255, 1), rgba(6, 6, 0, 1));
---color-paper: light-dark(rgba(250, 250, 250, 1), rgba(15, 15, 6, 1));
---color-box: light-dark(rgba(245, 240, 235, 1), rgba(25, 25, 15, 1));
---color-highlight: light-dark(rgb(255, 248, 230), rgb(35, 35, 25));
+  --color-title: rgba(40, 30, 5, 1);
+  --color-paragraph: rgba(70, 60, 20, 1);
+  --color-span: rgba(90, 65, 10, 1);
 
---color-title: light-dark(rgba(40, 30, 5, 1), rgba(255, 255, 255, 1));
---color-paragraph: light-dark(rgba(70, 60, 20, 1), rgba(230, 220, 180, 1));
---color-span: light-dark(rgba(90, 65, 10, 1), rgba(240, 220, 160, 1));
+  --color-outline: rgba(240, 230, 230, 1);
+  --color-scroll-body-bg: rgba(250, 250, 250, 1);
+  --color-scroll-body-thumb: rgba(200, 180, 120, 1);
 
---color-outline: light-dark(rgba(240, 230, 230, 1), rgba(40, 40, 40, 1));
---color-scroll-body-bg:  light-dark(rgba(250, 250, 250, 1), rgba(15, 15, 6, 1));
---color-scroll-body-thumb: light-dark(rgba(200, 180, 120, 1), rgba(120, 100, 50, 1));
-
---font-primary: "Poppins", sans-serif;
+  --font-primary: "Poppins", sans-serif;
 }
+
+html.dark {
+  --color-primary: rgb(255, 193, 45);
+  --color-secondary: rgb(255, 204, 77);
+  --color-tertiary: rgb(240, 170, 30);
+
+  --color-default: rgba(6, 6, 0, 1);
+  --color-paper: rgba(15, 15, 6, 1);
+  --color-box: rgba(25, 25, 15, 1);
+  --color-highlight: rgb(35, 35, 25);
+
+  --color-title: rgba(255, 255, 255, 1);
+  --color-paragraph: rgba(230, 220, 180, 1);
+  --color-span: rgba(240, 220, 160, 1);
+
+  --color-outline: rgba(40, 40, 40, 1);
+  --color-scroll-body-bg: rgba(15, 15, 6, 1);
+  --color-scroll-body-thumb: rgba(120, 100, 50, 1);
+}
+
 body {
   @apply bg-default text-paragraph;
   scroll-behavior: smooth;
